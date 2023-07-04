@@ -1,15 +1,16 @@
-configmapReload:
-  prometheus:
-    enabled: false
-server:
-  nodeSelector:
-    kubernetes.io/hostname: node-0
-  securityContext:
-    runAsUser: 1000
-    runAsNonRoot: true
-    runAsGroup: 1000
-    fsGroup: 1000
-  persistentVolume:
-    enabled: true
-    existingClaim: "usb-pvc"
-    volumeName: "usb-pv"
+prometheus:
+  configmapReload:
+    prometheus:
+      enabled: false
+  server:
+    nodeSelector:
+      kubernetes.io/hostname: node-0
+    securityContext:
+      runAsUser: 1000
+      runAsNonRoot: true
+      runAsGroup: 1000
+      fsGroup: 1000
+    persistentVolume:
+      enabled: true
+      existingClaim: "usb-pvc"
+      volumeName: "usb-pv"
