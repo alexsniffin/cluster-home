@@ -1,0 +1,19 @@
+configmapReload:
+  prometheus:
+    enabled: false
+server:
+  tolerations:
+  - key: "node-role.kubernetes.io/control-plane"
+    operator: "Exists"
+    effect: "NoSchedule"
+  nodeSelector:
+    kubernetes.io/hostname: node-0
+  securityContext:
+    runAsUser: 1000
+    runAsNonRoot: true
+    runAsGroup: 1000
+    fsGroup: 1000
+  persistentVolume:
+    enabled: true
+    existingClaim: "usb-pvc"
+    volumeName: "usb-pv"
