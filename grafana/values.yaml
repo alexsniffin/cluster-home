@@ -1,4 +1,5 @@
-service:
-  enabled: true
-  type: NodePort
-  nodePort: 30180
+grafana:
+  service:
+    enabled: true
+    type: NodePort
+    nodePort: 30180

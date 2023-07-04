@@ -2,10 +2,6 @@ configmapReload:
   prometheus:
     enabled: false
 server:
-  tolerations:
-  - key: "node-role.kubernetes.io/control-plane"
-    operator: "Exists"
-    effect: "NoSchedule"
   nodeSelector:
     kubernetes.io/hostname: node-0
   securityContext:
