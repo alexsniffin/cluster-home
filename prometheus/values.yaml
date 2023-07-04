@@ -12,5 +12,5 @@ prometheus:
       fsGroup: 1000
     persistentVolume:
       enabled: true
-      existingClaim: "usb-pvc"
-      volumeName: "usb-pv"
+      existingClaim: "prometheus-usb-pvc"
+      volumeName: "prometheus-usb-pv"
